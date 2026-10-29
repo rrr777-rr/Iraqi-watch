@@ -4,25 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ساعة بغداد - 3D</title>
-    
-    <!-- ربط ملف التنسيق CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- منطقة عرض الساعة 3D -->
+    <!-- حاوية عرض الساعة -->
     <div id="canvas-container"></div>
 
-    <!-- لوحة التحكم (الأزرار) -->
+    <!-- لوحة التحكم الفخمة -->
     <div class="ui-panel">
-        <button id="btn-gold">إطار ذهبي</button>
-        <button id="btn-silver">إطار فضي</button>
+        <h2>مصمم الساعة</h2>
+        
+        <div class="control-group">
+            <label>شكل الأرقام</label>
+            <select id="num-style">
+                <option value="english">إنجليزي (1, 2, 3)</option>
+                <option value="arabic">عربي (١, ٢, ٣)</option>
+                <option value="roman">روماني (I, II, III)</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>لون الأرقام</label>
+            <input type="color" id="num-color" value="#d4af37">
+        </div>
+
+        <div class="control-group">
+            <label>لون الواجهة (الميل)</label>
+            <input type="color" id="dial-color" value="#111111">
+        </div>
+
+        <div class="control-group">
+            <label>لون الإطار</label>
+            <input type="color" id="case-color" value="#d4af37">
+        </div>
+
+        <div class="control-group">
+            <label>لون الحزام</label>
+            <input type="color" id="strap-color" value="#3e2723">
+        </div>
     </div>
 
-    <!-- استدعاء مكتبة Three.js من الإنترنت -->
+    <!-- مكتبة Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-    <!-- ربط ملف الحركة JS -->
     <script src="script.js"></script>
 </body>
 </html>
