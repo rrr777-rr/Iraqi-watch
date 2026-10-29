@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ساعة بغداد - 3D</title>
-    <!-- ربط ملف التنسيق -->
+    <title>ساعة بغداد - الفخامة</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- منطقة عرض الساعة -->
     <div id="canvas-container"></div>
 
     <!-- لوحة التحكم الأفقية السفلية -->
@@ -28,7 +26,7 @@
         </div>
         <div class="control-group">
             <label>لون الواجهة</label>
-            <input type="color" id="dial-color" value="#111111">
+            <input type="color" id="dial-color" value="#0a0a0a">
         </div>
         
         <div class="divider"></div>
@@ -36,27 +34,39 @@
         <div class="control-group">
             <label>نوع الحزام</label>
             <select id="strap-type">
-                <option value="leather">جلد</option>
-                <option value="steel">ستيل</option>
+                <option value="leather">جلد طبيعي</option>
+                <option value="steel">معدن (ستيل)</option>
             </select>
         </div>
         
         <!-- خيارات الجلد -->
-        <div class="control-group" id="leather-options">
+        <div class="control-group leather-options">
             <label>لون الجلد</label>
-            <input type="color" id="strap-color" value="#3e2723">
+            <input type="color" id="strap-color" value="#2b1a10">
+        </div>
+        <div class="control-group leather-options">
+            <label>ملمس الجلد</label>
+            <select id="leather-texture">
+                <option value="smooth">ناعم</option>
+                <option value="grain">ضربات (مموج)</option>
+            </select>
         </div>
         
         <!-- خيارات الستيل -->
-        <div class="control-group" id="steel-options" style="display: none;">
+        <div class="control-group steel-options" style="display: none;">
             <label>لون الستيل</label>
-            <input type="color" id="steel-color" value="#c0c0c0">
+            <input type="color" id="steel-color" value="#e0e0e0">
+        </div>
+        <div class="control-group steel-options" style="display: none;">
+            <label>شكل الحلقات</label>
+            <select id="steel-shape">
+                <option value="square">مربعة</option>
+                <option value="round">دائرية</option>
+            </select>
         </div>
     </div>
 
-    <!-- مكتبة Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <!-- ربط ملف البرمجة -->
     <script src="script.js"></script>
 </body>
-</html>ss
+</html>

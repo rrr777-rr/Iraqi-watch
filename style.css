@@ -1,7 +1,7 @@
 body {
     margin: 0;
     overflow: hidden;
-    background: radial-gradient(circle at center, #1e1e1e 0%, #000000 100%);
+    background: #0d0d0d; /* خلفية سوداء فخمة جداً */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
@@ -15,60 +15,65 @@ body {
     z-index: 1;
 }
 
-/* لوحة التحكم الأفقية السفلية */
+/* لوحة التحكم السفلية */
 .ui-panel {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(15, 15, 15, 0.95);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(212, 175, 55, 0.4);
-    padding: 15px 0;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     z-index: 10;
     flex-wrap: wrap;
-    box-shadow: 0 -10px 30px rgba(0,0,0,0.8);
 }
 
 .control-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
 }
 
 .control-group label {
-    color: #aaa;
+    color: #888;
     font-size: 12px;
-    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .control-group select, 
 .control-group input[type="color"] {
-    width: 90px;
-    padding: 5px;
-    background: #222;
-    border: 1px solid #444;
-    color: #fff;
-    border-radius: 6px;
+    width: 100px;
+    padding: 8px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #d4af37; /* لون ذهبي للخط */
+    border-radius: 4px;
     cursor: pointer;
     font-family: inherit;
     text-align: center;
     outline: none;
+    transition: border 0.3s;
+}
+
+.control-group select:hover, 
+.control-group input[type="color"]:hover {
+    border-color: #d4af37;
 }
 
 .control-group input[type="color"] {
-    height: 30px;
+    height: 35px;
     padding: 2px;
 }
 
 .divider {
     width: 1px;
-    height: 40px;
-    background: rgba(255,255,255,0.1);
+    height: 50px;
+    background: #333;
     margin: 0 10px;
 }
