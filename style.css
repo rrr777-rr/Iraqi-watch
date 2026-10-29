@@ -1,0 +1,54 @@
+/* تصفير الهوامش وتجهيز الخلفية الفخمة */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* حاوية الرسم 3D */
+#canvas-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* لوحة الأزرار السفلية */
+.ui-panel {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 20px;
+    padding: 15px 35px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.8), inset 0 0 10px rgba(212,175,55,0.1);
+    z-index: 10;
+}
+
+/* تصميم الأزرار */
+button {
+    background: transparent;
+    color: #d4af37;
+    border: 1.5px solid #d4af37;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+button:hover {
+    background: #d4af37;
+    color: #000;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+}
