@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ساعة بغداد - 3D</title>
+    
+    <!-- ربط ملف التنسيق CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- منطقة عرض الساعة 3D -->
+    <div id="canvas-container"></div>
+
+    <!-- لوحة التحكم (الأزرار) -->
+    <div class="ui-panel">
+        <button id="btn-gold">إطار ذهبي</button>
+        <button id="btn-silver">إطار فضي</button>
+    </div>
+
+    <!-- استدعاء مكتبة Three.js من الإنترنت -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- ربط ملف الحركة JS -->
+    <script src="script.js"></script>
+</body>
+</html>
